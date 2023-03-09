@@ -1,0 +1,86 @@
+.name{
+    display: table-row;
+    
+}
+
+.phone{
+    display: table-row;
+
+}
+.email{
+    display: table-row;
+
+}
+.address{
+    display: table-row;
+    
+}
+.company{
+    display: table-row;
+
+}
+
+.showDetails{
+    min-width: 16vw;
+    height: 27vh;
+    background-color: rgb(218, 218, 218);
+    border-radius: 5px;
+    display: table;
+    padding: 20px;
+    font-size: larger;
+    box-shadow: 2px 2px 3px rgb(94, 94, 94);
+    position: relative;
+}
+
+.edit{
+    display: flex;
+    justify-content: center;
+}
+
+.col{
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+}
+
+.coledit{
+    text-align: center;
+    display: table-cell;
+    width: 100%;
+    background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(255, 94, 0);
+}
+
+.coledit:hover{
+    
+    background-image:linear-gradient(to right,rgb(250, 184, 146),rgb(255, 157, 187)) ;
+    cursor: pointer;
+    border: 1px solid rgb(255, 115, 0);
+}
+
+.circle{
+    width: 5em;
+    border-radius: 50%;
+    background-color: yellow;
+    display: inline-block;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.circle span{
+    font-size: 1.5em;
+}
+
+.circleDiv{
+    display: table-row;
+}
+
+.circleDiv>p{
+    margin: 0;
+}
+

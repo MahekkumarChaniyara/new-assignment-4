@@ -1,0 +1,31 @@
+.main{
+    display:flex;
+    flex-direction: column;
+
+
+    background-image: linear-gradient(to bottom,rgb(255, 115, 34),rgb(255, 86, 137));
+    align-items: center;
+    height: 100vh;
+}
+.main a{
+    display: block;
+    margin:1rem;
+    color:white;
+    scale: 1.3;
+    
+}
+.main>div{
+    margin-bottom: 1.3rem;
+}
+
+
+
+.main2{
+    display:flex;
+    flex-direction: column;
+
+   
+    
+    align-items: center;
+    height: 100vh;
+}

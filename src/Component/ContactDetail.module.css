@@ -1,0 +1,12 @@
+.first{
+    display: flex;
+    width:100vw;
+    height: 100vh;
+}
+
+.second{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}

@@ -1,0 +1,84 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.main input{
+    border-radius: 29px;
+    width:9vw;
+    height:20px;
+    margin-left: 2%;
+    padding: 7px;
+}
+
+.button{
+    border: 1px solid red;
+    background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
+    padding: 4.5px;
+    border-radius: 5px;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputdiv{
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.labels p{
+    display: inline;
+}
+.labels{
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(219, 219, 219);
+    border-radius: 5px;
+}
+
+.p1{
+    margin-left: 17%;
+}
+.p2{
+    margin-right: 3%;
+}
+
+.scrollmany{
+    height: 80vh;
+    min-width: 27vw;
+}
+
+.contactIcon{
+    margin-top: 25px;
+    display: flex;
+    flex-direction:row;
+
+}
+
+.spancontact{
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    color: grey;
+    float: left;
+    justify-content: space-around;
+}
+
+.span1{
+    color:black
+}
+
+.icons{
+    font-size: 2rem;
+    color:rgb(255, 94, 0)
+}
+
+.scrollmany p{
+    text-align: center;
+}

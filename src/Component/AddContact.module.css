@@ -1,0 +1,39 @@
+.mainform{
+    margin:0 auto;
+    display:flex;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    width: 29vw;
+}
+
+.small{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.small label{
+    margin-right:20px
+}   
+
+.buttons button{
+    background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
+    border-radius: 3px;
+    border: 1px solid rgb(255, 94, 0);
+    padding: 10px;
+    float:right;
+    margin: 10px;
+}
+
+.buttons button:hover{
+    background-image:linear-gradient(to right,rgb(250, 184, 146),rgb(255, 157, 187)) ;
+    cursor: pointer;
+    border: 1px solid rgb(255, 115, 0);
+}
+
+.divmid{
+    width: 100vw;
+    height: 100vh;
+}
