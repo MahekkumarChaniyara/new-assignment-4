@@ -114,7 +114,7 @@ const AddContact = (props) => {
                 Phone Number<span className={classes.span}>*</span>
               </label>
               <input
-                type="number"
+                type="text"
                 id="number"
                 name="number"
                 defaultValue={dataContact && dataContact.contact.phone}
@@ -172,7 +172,7 @@ export async function action({ request, params }) {
   if (
     bodyData.phone === "" ||
     bodyData.phone.length > 11 ||
-    bodyData.phone.length < 10
+    bodyData.phone.length < 10 || isNaN(bodyData.phone)
   ) {
     error.phoneerror = "Please Enter 10 Digit Number";
   }
