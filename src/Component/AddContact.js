@@ -36,7 +36,7 @@ const AddContact = (props) => {
               </>
             )}
             <div className={classes.small}>
-              <label htmlFor="name">Enter Full Name</label>
+              <label htmlFor="name" className={errorData&&errorData.fullnameerror&&classes.labelError}>Enter Full Name</label>
               <input
                 id="name"
                 name="name"
@@ -55,7 +55,7 @@ const AddContact = (props) => {
               </>
             )}
             <div className={classes.small}>
-            <label htmlFor="email">Email Id</label>
+            <label htmlFor="email" className={errorData&&errorData.emailerror&&classes.labelError}>Email Id</label>
             <input
               type="text"
               name="email"
@@ -98,7 +98,7 @@ const AddContact = (props) => {
               </>
             )}
             <div className={classes.small}>
-              <label htmlFor="number">Phone Number</label>
+              <label htmlFor="number" className={errorData&&errorData.phoneerror&&classes.labelError}>Phone Number</label>
               <input
                 type="number"
                 id="number"

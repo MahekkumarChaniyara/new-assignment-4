@@ -25,6 +25,7 @@ input{
     margin: 0;
     color:red;
     font-size: small;
+    text-align: end;
 }
 
 .small label{
@@ -34,6 +35,10 @@ input{
 .inputError{
     border: 1px solid red;
     background-color: rgba(255, 0, 0, 0.2);
+}
+
+.labelError{
+    color:red;
 }
 
 .buttons button{

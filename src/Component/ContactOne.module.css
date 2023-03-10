@@ -62,7 +62,6 @@
 }
 
 .coledit:hover{
-    
     background-image:linear-gradient(to right,rgb(250, 184, 146),rgb(255, 157, 187)) ;
     cursor: pointer;
     border: 1px solid rgb(255, 115, 0);
