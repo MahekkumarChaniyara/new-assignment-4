@@ -1,12 +1,24 @@
 .first{
     display: flex;
     width:100vw;
-    height: 100vh;
+    height: 93vh;
 }
 
 .second{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
+    width: 60vw;
+}
+
+@media screen and (max-width:480px) {
+    .first{
+        flex-direction: column;
+        height: 150vh;
+    }
+    .second{
+        width: 100%;
+        margin-top: 10%;
+        margin-right: 0.2%;
+    }
 }

@@ -1,6 +1,13 @@
 .headerdiv{
     display: flex;
     margin-left: 1.5rem;
-    /* width:100vw;
-    height: 100vh; */
+    /* width:100vw;*/
+    height: 100%; 
+}
+
+@media screen and (max-width:480px){
+    .headerdiv{
+        margin-left: 0.2rem;
+        margin-right: 0.2rem;
+    }
 }

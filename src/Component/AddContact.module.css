@@ -37,3 +37,17 @@
     width: 100vw;
     height: 100vh;
 }
+
+@media screen and (max-width:480px){
+    .mainform{
+        width: 81%;
+        margin: 0 auto;
+    }
+    .divmid{
+        width: 99vw;
+        height: 100vh;
+    }
+    .small{
+        flex-direction: column;
+    }
+}

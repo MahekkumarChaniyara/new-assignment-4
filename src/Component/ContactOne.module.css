@@ -41,6 +41,7 @@
     display: table-cell;
     text-align: left;
     padding: 10px;
+    word-break: break-word;
 }
 
 .coledit{
@@ -82,5 +83,14 @@
 
 .circleDiv>p{
     margin: 0;
+}
+
+@media screen and (max-width:480px) {
+    .showDetails{
+        min-width: 20%;
+    }
+    .col{
+        padding: 6px;
+    }
 }
 

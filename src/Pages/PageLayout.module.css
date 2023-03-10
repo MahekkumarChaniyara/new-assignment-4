@@ -29,3 +29,23 @@
     align-items: center;
     height: 100vh;
 }
+ 
+@media screen and (max-width:480px){
+    .main{
+        flex-direction: row;
+        height: 6vh;
+        justify-content: space-between;
+    }
+    .main2{
+        flex-direction: row;
+        height:0 ;
+    }
+    .main>div{
+        margin-bottom: 0rem;
+    }
+    .main a{
+        margin:0.7rem;
+        scale: 1;
+        
+    }
+}

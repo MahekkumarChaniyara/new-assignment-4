@@ -2,3 +2,14 @@
     width: 100vw;
     height: 100vh;
 }
+
+h3{
+    text-align: center;
+}
+
+@media screen and (max-width:480px){
+    .divmid{
+        width: 99vw;
+        height: 100%;
+    }
+}
