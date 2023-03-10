@@ -22,10 +22,9 @@
 
 .showDetails{
     min-width: 16vw;
-    height: 27vh;
-    background-color: rgb(218, 218, 218);
+    height: 49%;
+    background-color: rgb(243, 243, 243);
     border-radius: 5px;
-    display: table;
     padding: 20px;
     font-size: larger;
     box-shadow: 2px 2px 3px rgb(94, 94, 94);
@@ -42,6 +41,14 @@
     text-align: left;
     padding: 10px;
     word-break: break-word;
+}
+
+.col1{
+    display: table-cell;
+    text-align: left;
+    padding: 10px;
+    word-break: break-word;
+    color:rgb(124, 124, 124);
 }
 
 .coledit{
@@ -65,12 +72,10 @@
     width: 5em;
     border-radius: 50%;
     background-color: yellow;
-    display: inline-block;
     height: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .circle span{
@@ -78,16 +83,25 @@
 }
 
 .circleDiv{
-    display: table-row;
+    margin-bottom: 5%;
+    display: block;
+    width:100%
 }
 
 .circleDiv>p{
     margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    word-break: initial;
 }
 
 @media screen and (max-width:950px) {
     .showDetails{
         min-width: 20%;
+        height: 93%;
     }
     .col{
         padding: 6px;
@@ -96,7 +110,7 @@
 
 @media screen and (max-width:480px) {
     .showDetails{
-        min-width: 20%;
+        width: 80%;
     }
     .col{
         padding: 6px;

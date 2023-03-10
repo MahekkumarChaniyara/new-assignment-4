@@ -23,23 +23,23 @@ const ContactOne = (props) => {
           <p><span className={classes.circle}><span>{profileWord}</span></span></p>
         </div>
         <div className={classes.name}>
-          <div className={classes.col}>FullName:</div>
+          <div className={classes.col1}>FullName:</div>
           <div className={classes.col}>{props.contact.fullname}</div>
         </div>
         <div className={classes.email}>
-          <div className={classes.col}>Email:</div>
+          <div className={classes.col1}>Email:</div>
           <div className={classes.col}>{props.contact.email}</div>
         </div>
         <div className={classes.phone}>
-          <div className={classes.col}>Phone:</div>
+          <div className={classes.col1}>Phone:</div>
           <div className={classes.col}>{props.contact.phone}</div>
         </div>
         <div className={classes.company}>
-          <div className={classes.col}>Company:</div>
+          <div className={classes.col1}>Company:</div>
           <div className={classes.col}>{props.contact.company}</div>
         </div>
         <div className={classes.address}>
-          <div className={classes.col}>Address:</div>
+          <div className={classes.col1}>Address:</div>
           <div className={classes.col}>{props.contact.address}</div>
         </div>
         <div className={classes.col}>
