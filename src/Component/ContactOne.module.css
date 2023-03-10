@@ -85,6 +85,15 @@
     margin: 0;
 }
 
+@media screen and (max-width:950px) {
+    .showDetails{
+        min-width: 20%;
+    }
+    .col{
+        padding: 6px;
+    }
+}
+
 @media screen and (max-width:480px) {
     .showDetails{
         min-width: 20%;
@@ -93,4 +102,6 @@
         padding: 6px;
     }
 }
+
+
 

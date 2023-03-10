@@ -33,6 +33,16 @@
     align-items: center;
 }
 
+.iconsearch{
+    position: absolute;
+    right:7px;
+    top:12px;
+}
+
+.serachDiv{
+    position: relative;
+}
+
 .labels p{
     display: inline;
 }
@@ -85,6 +95,54 @@
     text-align: center;
 }
 
+
+
+@media screen and (max-width:1200px) {
+    .p2{
+        margin-right: 22%;
+    }
+    .inputdiv{
+        justify-content: space-between;
+    }
+    .main input{
+        width: 13vw;
+    }
+}
+
+
+@media screen and (max-width:950px){
+    .inputdiv{
+        display: flex;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .main input{
+        border-radius: 29px;
+        width:40vw;
+        height:20px;
+        margin-left: 1%;
+        padding: 7px;
+    }
+    .button{
+        border: 1px solid red;
+        background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
+        padding: 4.5px;
+        border-radius: 5px;
+        min-width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .main{
+        width:100%;
+    }
+    .p2{
+        margin-right: 12%;
+    }
+}
+
 @media screen and (max-width:480px){
     .inputdiv{
         display: flex;
@@ -110,4 +168,12 @@
         align-items: center;
         justify-content: center;
     }
+    .main{
+        width:100%;
+    }
+    .p2{
+        margin-right: 5%;
+    }
 }
+
+

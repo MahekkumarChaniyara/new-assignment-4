@@ -1,8 +1,9 @@
-import {Outlet} from "react-router-dom"
+import {Outlet, useNavigation} from "react-router-dom"
 const NewContactPage=()=>{
+
     return (
         <>
-            <Outlet/>
+            <Outlet/>     
         </>
     )
 }

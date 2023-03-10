@@ -12,11 +12,29 @@
 .small{
     display: flex;
     justify-content: space-between;
+    
+}
+input{
+    border-radius:5px ;
+}
+.smallparent{
     margin: 10px;
 }
+
+.smallparent p{
+    margin: 0;
+    color:red;
+    font-size: small;
+}
+
 .small label{
     margin-right:20px
-}   
+}  
+
+.inputError{
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.2);
+}
 
 .buttons button{
     background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
@@ -36,6 +54,26 @@
 .divmid{
     width: 100vw;
     height: 100vh;
+}
+
+@media screen and (max-width:1200px){
+    .mainform{
+        width:93%
+    }
+}
+
+@media screen and (max-width:950px){
+    .mainform{
+        width: 81%;
+        margin: 0 auto;
+    }
+    .divmid{
+        width: 99vw;
+        height: 100vh;
+    }
+    .small{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:480px){

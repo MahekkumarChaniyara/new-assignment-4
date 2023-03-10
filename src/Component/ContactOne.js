@@ -14,7 +14,7 @@ const ContactOne = (props) => {
     console.log(profileWord)
   }
   console.log(profileWord)
-  
+
  
   return (
     <>
@@ -47,7 +47,6 @@ const ContactOne = (props) => {
           
         </div>
       </div>
-     
     </>
   );
 };

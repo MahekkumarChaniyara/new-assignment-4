@@ -4,6 +4,7 @@ import classes from "./NewContact.module.css";
 import {useState} from "react";
 import {RiContactsBook2Fill} from "react-icons/ri"
 import {AiOutlinePlus} from "react-icons/ai"
+import {BiSearch} from "react-icons/bi"
 
 const NewContact=()=>{
     const contactDetails=useRouteLoaderData('loadcontact');
@@ -18,7 +19,7 @@ const NewContact=()=>{
         <>
             <div className={classes.main}>
                 <div className={classes.contactIcon}><div><RiContactsBook2Fill className={classes.icons}/></div><div className={classes.spancontact}><span className={classes.span1}>Contact</span><span>Welcome to firstCRM contact page</span></div></div>
-                <div className={classes.inputdiv}> <input type="text" placeholder="search contact" onChange={seachingContact}></input><div className={classes.button}><Link className={classes.a} to="/contact/addcontact"><AiOutlinePlus/>Add Contact</Link></div></div>
+                <div className={classes.inputdiv}> <div className={classes.serachDiv}><BiSearch className={classes.iconsearch}/><input type="text" placeholder="search contact" onChange={seachingContact}></input></div><div className={classes.button}><Link className={classes.a} to="/contact/addcontact"><AiOutlinePlus/>Add Contact</Link></div></div>
                 <div className={classes.labels}>
                     <p className={classes.p1}>Basic Info</p>
                     <p className={classes.p2}>Company Name</p>
@@ -36,6 +37,7 @@ export async function loader(){
     if(!response.ok){
         throw json({message:'Could Not Load Data'},{status:500})
     }
+    console.log("NewCOntact")
     const result=await response.json();
     const arr=[]
     for( const key in result){

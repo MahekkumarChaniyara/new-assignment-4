@@ -11,6 +11,26 @@
     width: 60vw;
 }
 
+
+@media screen and (max-width:1000px) {
+    .second{
+        margin-left: 19px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .first{
+        flex-direction: column;
+        height: 150vh;
+    }
+    .second{
+        width: 100%;
+        margin-top: 10%;
+        margin-right: 0.2%;
+        margin-left: 0px;
+    }
+}
+
 @media screen and (max-width:480px) {
     .first{
         flex-direction: column;
@@ -20,5 +40,7 @@
         width: 100%;
         margin-top: 10%;
         margin-right: 0.2%;
+        margin-left: 0px;
     }
 }
+

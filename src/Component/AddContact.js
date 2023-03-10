@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 
 const AddContact = (props) => {
-  const errorData=useActionData();
+  const errorData = useActionData();
   const navigate = useNavigate();
   function clickHandler() {
     navigate("..");
@@ -22,24 +22,39 @@ const AddContact = (props) => {
     <>
       {errorData && (
         <>
-        <p>{errorData.fullnameerror}</p>
-        <p>{errorData.emailerror}</p>
-        <p>{errorData.phoneerror}</p>
+          <p>{errorData.fullnameerror}</p>
+          <p>{errorData.emailerror}</p>
+          <p>{errorData.phoneerror}</p>
         </>
       )}
       <Form method={props.method}>
         <div className={classes.mainform}>
-          <div className={classes.small}>
-            <label htmlFor="name">Enter Full Name</label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              placeholder="Person Full Name"
-              defaultValue={dataContact && dataContact.contact.fullname}
-            ></input>
+          <div className={classes.smallparent}>
+            {errorData && (
+              <>
+                <p>{errorData.fullnameerror}</p>
+              </>
+            )}
+            <div className={classes.small}>
+              <label htmlFor="name">Enter Full Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Person Full Name"
+                defaultValue={dataContact && dataContact.contact.fullname}
+                className={errorData&&errorData.fullnameerror&&classes.inputError}
+              ></input>
+            </div>
           </div>
-          <div className={classes.small}>
+
+          <div className={classes.smallparent}>
+            {errorData && (
+              <>
+                <p>{errorData.emailerror}</p>
+              </>
+            )}
+            <div className={classes.small}>
             <label htmlFor="email">Email Id</label>
             <input
               type="text"
@@ -47,9 +62,13 @@ const AddContact = (props) => {
               id="email"
               placeholder="test@test.com"
               defaultValue={dataContact && dataContact.contact.email}
+              className={errorData&&errorData.emailerror&&classes.inputError}
             ></input>
           </div>
-          <div className={classes.small}>
+          </div>
+          
+          <div className={classes.smallparent}>
+            <div className={classes.small}>
             <label htmlFor="address">Address</label>
             <input
               type="text"
@@ -58,26 +77,42 @@ const AddContact = (props) => {
               defaultValue={dataContact && dataContact.contact.address}
             ></input>
           </div>
-          <div className={classes.small}>
-            <label htmlFor="company">Company Name</label>
-            <input
-              type="text"
-              name="company"
-              id="company"
-              defaultValue={dataContact && dataContact.contact.company}
-            ></input>
           </div>
-          <div className={classes.small}>
-            <label htmlFor="number">Phone Number</label>
-            <input
-              type="number"
-              id="number"
-              name="number"
-              defaultValue={dataContact && dataContact.contact.phone}
-            ></input>
+          
+          <div className={classes.smallparent}>
+            <div className={classes.small}>
+              <label htmlFor="company">Company Name</label>
+              <input
+                type="text"
+                name="company"
+                id="company"
+                defaultValue={dataContact && dataContact.contact.company}
+              ></input>
+            </div>
           </div>
+          
+          <div className={classes.smallparent}>
+            {errorData && (
+              <>
+                <p>{errorData.phoneerror}</p>
+              </>
+            )}
+            <div className={classes.small}>
+              <label htmlFor="number">Phone Number</label>
+              <input
+                type="number"
+                id="number"
+                name="number"
+                defaultValue={dataContact && dataContact.contact.phone}
+                className={errorData&&errorData.phoneerror&&classes.inputError}
+              ></input>
+            </div>
+          </div>
+          
           <div className={classes.buttons}>
-            <button type="button" onClick={clickHandler}>Cancel</button>
+            <button type="button" onClick={clickHandler}>
+              Cancel
+            </button>
             <button className={classes.submit}>
               {submitnavigate.state === "submitting"
                 ? "Submitting..."
@@ -102,25 +137,33 @@ export async function action({ request, params }) {
     email: formdata.get("email").trim(),
     phone: formdata.get("number").trim(),
   };
-  const error={}
-  if(bodyData.fullname===""){
-    error.fullnameerror="Please Enter Person Name";
+  const error = {};
+  if (bodyData.fullname === "") {
+    error.fullnameerror = "Please Enter Person Name";
   }
-  if(bodyData.email==="" || !bodyData.email.includes('@') || !bodyData.email.includes(".")){
-    error.emailerror="Please Enter Valid Emial Address";
+  if (
+    bodyData.email === "" ||
+    !bodyData.email.includes("@") ||
+    !bodyData.email.includes(".")
+  ) {
+    error.emailerror = "Please Enter Valid Emial Address";
   }
-  if(bodyData.phone==="" || bodyData.phone.length>11 || bodyData.phone.length<9){
-    error.phoneerror="Please Enter 10 Digit Number";
+  if (
+    bodyData.phone === "" ||
+    bodyData.phone.length > 11 ||
+    bodyData.phone.length < 10
+  ) {
+    error.phoneerror = "Please Enter 10 Digit Number";
   }
-  if(bodyData.address===""){
-    bodyData.address="Information is Not Provided"
+  if (bodyData.address === "") {
+    bodyData.address = "Information is Not Provided";
   }
-  if(bodyData.company===""){
-    bodyData.company="Information is Not Provided"
+  if (bodyData.company === "") {
+    bodyData.company = "Information is Not Provided";
   }
-  console.log(error,"error");
-  if(Object.keys(error).length>0){
-    console.log(error,"error");
+  console.log(error, "error");
+  if (Object.keys(error).length > 0) {
+    console.log(error, "error");
     return error;
   }
   if (request.method === "POST") {
