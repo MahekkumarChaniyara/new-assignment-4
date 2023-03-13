@@ -43,7 +43,7 @@ const ContactOne = (props) => {
           <div className={classes.col}>{props.contact.address}</div>
         </div>
         <div className={classes.col}>
-        <div className={classes.coledit}><Link to={`edit`}>Edit Contact</Link></div>
+        <Link to={`edit`}><div className={classes.coledit}>Edit Contact</div></Link>
           
         </div>
       </div>
