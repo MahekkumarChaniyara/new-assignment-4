@@ -13,7 +13,6 @@ const NewContact=()=>{
         setSearch(e.target.value);
     }
     const filterContactDetails=contactDetails.filter(oneContact=>oneContact.fullname.includes(search.trim()))
-    console.log(filterContactDetails)
     const renderList=search===null?contactDetails:filterContactDetails
     return (
         <>
@@ -37,7 +36,6 @@ export async function loader(){
     if(!response.ok){
         throw json({message:'Could Not Load Data'},{status:500})
     }
-    console.log("NewCOntact")
     const result=await response.json();
     const arr=[]
     for( const key in result){
@@ -48,6 +46,7 @@ export async function loader(){
             address:result[key].address,
             phone:result[key].phone,
             email:result[key].email,
+            position:result[key].position,
         })
     }
     return arr;

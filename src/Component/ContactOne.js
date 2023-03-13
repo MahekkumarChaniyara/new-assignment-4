@@ -3,17 +3,12 @@ import { Link } from "react-router-dom";
 
 const ContactOne = (props) => {
   const twoLetter=props.contact.fullname.split(" ")
-  console.log(twoLetter);
   const firstLetter=twoLetter[0].slice(0,1).toUpperCase();
-  console.log(firstLetter)
   let profileWord=firstLetter
   if(twoLetter.length>1){
     const secondLetter=twoLetter[1].slice(0,1).toUpperCase();
-    console.log(secondLetter)
     profileWord=firstLetter.concat(secondLetter)
-    console.log(profileWord)
   }
-  console.log(profileWord)
 
  
   return (
@@ -21,6 +16,7 @@ const ContactOne = (props) => {
       <div className={classes.showDetails}>
         <div className={classes.circleDiv}>
           <p><span className={classes.circle}><span>{profileWord}</span></span></p>
+          {props.contact.position && props.contact.company && <p className={classes.showPosition}>{props.contact.position} at {props.contact.company}</p>}
         </div>
         <div className={classes.name}>
           <div className={classes.col1}>FullName:</div>

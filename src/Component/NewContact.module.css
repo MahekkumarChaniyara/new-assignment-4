@@ -48,6 +48,7 @@
 
 .serachDiv{
     position: relative;
+    z-index: 0;
 }
 
 .labels p{

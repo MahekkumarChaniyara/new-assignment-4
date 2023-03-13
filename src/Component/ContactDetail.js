@@ -7,7 +7,6 @@ import NewContact from "./NewContact";
 
 const ContactDetail=()=>{
     const data=useRouteLoaderData('individual');
-    console.log(data,"contact details data")
     return (
         <>
             <div className={classes.first}>
@@ -52,7 +51,6 @@ async function onecontactloader(params){
     // if(Object.keys(arrone).length===0){
     //     arrone.error="contact not found"
     // }
-    console.log(result)
     return result;
 }
 
@@ -81,7 +79,6 @@ async function onecontactloader(params){
 
 
 export async function loader({request,params}){
-    console.log("contact details")
     return defer({
         contact:await onecontactloader(params),
         // contacts:contactsloader(),

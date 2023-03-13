@@ -105,6 +105,18 @@ const AddContact = (props) => {
 
           <div className={classes.smallparent}>
             <div className={classes.small}>
+              <label htmlFor="position">Position</label>
+              <input
+                type="text"
+                name="position"
+                id="position"
+                defaultValue={dataContact && dataContact.contact.position}
+              ></input>
+            </div>
+          </div>
+
+          <div className={classes.smallparent}>
+            <div className={classes.small}>
               <label
                 htmlFor="number"
                 className={
@@ -157,6 +169,7 @@ export async function action({ request, params }) {
     address: formdata.get("address").trim(),
     email: formdata.get("email").trim(),
     phone: formdata.get("number").trim(),
+    position:formdata.get("position").trim(),
   };
   const error = {};
   if (bodyData.fullname === "") {
@@ -182,9 +195,7 @@ export async function action({ request, params }) {
   if (bodyData.company === "") {
     bodyData.company = "Information is Not Provided";
   }
-  console.log(error, "error");
   if (Object.keys(error).length > 0) {
-    console.log(error, "error");
     return error;
   }
   if (request.method === "POST") {
