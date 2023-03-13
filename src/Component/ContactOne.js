@@ -10,7 +10,6 @@ const ContactOne = (props) => {
     profileWord=firstLetter.concat(secondLetter)
   }
 
- 
   return (
     <>
       <div className={classes.showDetails}>
