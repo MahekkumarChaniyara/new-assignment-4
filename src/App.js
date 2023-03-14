@@ -17,7 +17,7 @@ function App() {
       {index:true,element:<NewPage/>},
       {
         path:'contact',element:<NewContactPage/>,id:'loadcontact',loader:loadContacts,children:[
-          {index:true,element:<NewContact/>},
+          {path:'',element:<NewContact/>},
           {path:'addcontact',element:<AddContactPage/>,children:[
             {index:true,element:<AddContact method="POST"/>,action:saveContactAction},  
           ]},

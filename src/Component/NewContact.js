@@ -1,4 +1,4 @@
-import { json, useRouteLoaderData,Link } from "react-router-dom";
+import { json, useRouteLoaderData,Link, Outlet } from "react-router-dom";
 import ContactsList from "./ContactsList";
 import classes from "./NewContact.module.css";
 import {useState} from "react";
@@ -25,6 +25,7 @@ const NewContact=()=>{
                 </div>
                 <div className={classes.scrollmany}>{renderList.length>0?<ContactsList contact={renderList}/>:<p>No one contact is save</p>}</div>
             </div>
+            <Outlet/>
         </>
     )
 }
