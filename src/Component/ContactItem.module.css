@@ -18,6 +18,10 @@
     word-break: break-word;
 }
 
+.email{
+    color:rgb(136, 136, 136)
+}
+
 .company{
     display: inline;
     margin-right: 40px;

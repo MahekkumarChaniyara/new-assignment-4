@@ -21,7 +21,7 @@ const ContactItem = (props) => {
         </div>
         <div className={classes.name}>
           <div>{props.contact.fullname}</div>
-          <div>{props.contact.email}</div>
+          <div className={classes.email}>{props.contact.email}</div>
         </div>
         <p className={classes.company}>{props.contact.company}</p>
       </div>

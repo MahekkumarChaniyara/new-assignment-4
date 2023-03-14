@@ -103,6 +103,14 @@
     text-align: center;
 }
 
+.a{
+    color: white;
+}
+
+.a:hover{
+    color:black
+}
+
 
 
 @media screen and (max-width:1200px) {
