@@ -12,7 +12,7 @@ const NewContact=()=>{
     function seachingContact(e){
         setSearch(e.target.value);
     }
-    const filterContactDetails=contactDetails.filter(oneContact=>oneContact.fullname.includes(search.trim()))
+    const filterContactDetails=contactDetails.filter(oneContact=>oneContact.fullname.toLowerCase().includes(search.trim()))
     const renderList=search===null?contactDetails:filterContactDetails
     return (
         <>
