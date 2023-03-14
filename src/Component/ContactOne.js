@@ -12,7 +12,7 @@ const ContactOne = (props) => {
 
   return (
     <>
-      <div className={classes.showDetails}>
+      <div className={classes.showDetails} id="details">
         <div className={classes.circleDiv}>
           <p><span className={classes.circle}><span>{profileWord}</span></span></p>
           {props.contact.position && props.contact.company && <p className={classes.showPosition}>{props.contact.position} at {props.contact.company}</p>}
