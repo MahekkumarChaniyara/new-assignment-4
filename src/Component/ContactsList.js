@@ -10,7 +10,7 @@ const ContactsList=(props)=>{
         <>
             <div className={classes.main}>
                 <ul>
-                    {props.contact.map(contact=><li key={contact.id}><Link to={`/contact/${contact.id}`} href={`#details`}><ContactItem  contact={contact}/></Link></li>)}
+                    {props.contact.map(contact=><li key={contact.id}><Link to={`/contact/${contact.id}`}><ContactItem contact={contact}/></Link></li>)}
                 </ul>
             </div>
         </>

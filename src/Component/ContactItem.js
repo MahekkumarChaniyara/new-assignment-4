@@ -20,10 +20,10 @@ const ContactItem = (props) => {
             </p>
         </div>
         <div className={classes.name}>
-          <div>{props.contact.fullname}</div>
+          <div className={classes.fullname}>{props.contact.fullname}</div>
           <div className={classes.email}>{props.contact.email}</div>
         </div>
-        <p className={classes.company}>{props.contact.company}</p>
+        <div className={classes.company}>{props.contact.company}</div>
       </div>
     </>
   );

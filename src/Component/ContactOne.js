@@ -12,10 +12,10 @@ const ContactOne = (props) => {
 
   return (
     <>
-      <div className={classes.showDetails} id="details">
+      <div className={classes.showDetails}>
         <div className={classes.circleDiv}>
           <p><span className={classes.circle}><span>{profileWord}</span></span></p>
-          {props.contact.position && props.contact.company && <p className={classes.showPosition}>{props.contact.position} at {props.contact.company}</p>}
+          {props.contact.position && props.contact.company && <p className={classes.showPosition}><span className={classes.spanClass}><span style={{marginRight:'3.6px'}}>{props.contact.position}</span> <span style={{marginRight:'3.6px'}}>at</span> <span className={classes.companyname}>{props.contact.company}</span></span></p>}
         </div>
         <div className={classes.name}>
           <div className={classes.col1}>FullName:</div>

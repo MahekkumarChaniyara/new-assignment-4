@@ -24,11 +24,28 @@
     color:rgb(177, 177, 177);
     padding: 11px;
     font-size: smaller;
+    text-align: center;
+}
+
+.spanClass{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+.companyname{
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    /* margin-left: 3.6px; */
 }
 
 .showDetails{
     min-width: 16vw;
-    height: 55%;
+    /* height: 55%; */
     background-color: rgb(243, 243, 243);
     border-radius: 5px;
     padding: 20px;
