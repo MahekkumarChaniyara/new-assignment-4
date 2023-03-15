@@ -18,7 +18,7 @@ const NewContact=()=>{
         <>
             <div className={classes.main}>
                 <div className={classes.contactIcon}><div><RiContactsBook2Fill className={classes.icons}/></div><div className={classes.spancontact}><span className={classes.span1}>Contact</span><span>Welcome to firstCRM contact page</span></div></div>
-                <div className={classes.inputdiv}> <div className={classes.serachDiv}><BiSearch className={classes.iconsearch}/><input type="text" placeholder="search contact" onChange={seachingContact}></input></div><Link className={classes.a} to="/contact/addcontact"><div className={classes.button}><AiOutlinePlus/>Add Contact</div></Link></div>
+                <div className={classes.inputdiv} title="This is Search bar to serach contact using person name"> <div className={classes.serachDiv}><BiSearch className={classes.iconsearch}/><input type="text" placeholder="search contact" onChange={seachingContact}></input></div><Link className={classes.a} to="/contact/addcontact"><div className={classes.button} title="This is ADD Contact button"><AiOutlinePlus/>Add Contact</div></Link></div>
                 <div className={classes.labels}>
                     <p className={classes.p1}>Basic Info</p>
                     <p className={classes.p2}>Company Name</p>

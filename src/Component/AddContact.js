@@ -143,10 +143,10 @@ const AddContact = (props) => {
           </div>
 
           <div className={classes.buttons}>
-            <button type="button" onClick={clickHandler}>
+            <button type="button" onClick={clickHandler} title="Using this button you can move to previous page">
               Cancel
             </button>
-            <button className={classes.submit}>
+            <button className={classes.submit} title="Using that you can you can save your person contact details">
               {submitnavigate.state === "submitting"
                 ? "Submitting..."
                 : "Submit"}
