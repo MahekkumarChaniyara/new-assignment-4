@@ -15,8 +15,8 @@
 
 @media screen and (max-width:480px){
     .headerdiv{
-        margin-left: 0.2rem;
-        margin-right: 0.2rem;
+        margin: 0;
+        width: 100%;
     }
 }
 

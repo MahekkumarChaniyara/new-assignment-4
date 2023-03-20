@@ -1,4 +1,4 @@
-import {json,defer,Await} from "react-router-dom";
+import {json,defer,Await, useNavigate} from "react-router-dom";
 import {useRouteLoaderData} from "react-router-dom";
 import {Suspense} from "react"
 import ContactOne from "./ContactOne";
@@ -7,8 +7,15 @@ import NewContact from "./NewContact";
 
 const ContactDetail=()=>{
     const data=useRouteLoaderData('individual');
+    const navigate=useNavigate();
+    const handle=()=>{
+        navigate('..')
+    }
     return (
         <>
+            <div className={classes.backfirst} onClick={handle}>
+
+            </div>
             <div className={classes.first}>
                 <NewContact/>
                 <div className={classes.second}>

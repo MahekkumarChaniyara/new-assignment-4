@@ -77,6 +77,7 @@
 .coledit{
     text-align: center;
     display: table-cell;
+    /* word-break: initial; */
     width: 100%;
     background-image:linear-gradient(to right,rgb(255, 115, 34),rgb(255, 86, 137)) ;
     padding: 10px;
@@ -137,6 +138,8 @@ a{
     .showDetails{
         width: 80%;
         margin: 10px;
+        height: auto;
+        z-index:11;
     }
     .col{
         padding: 6px;
